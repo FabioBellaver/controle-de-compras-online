@@ -184,8 +184,6 @@ def buscar_pedido(nome_arquivo):
                     print(f'{formatar_para_real(dado["valor"]):<12}', end='')
                     print(f'{dado["data_compra"]:<15}', end='')
                     print(f'{dado["previsao_entrega"]:<15}')
-                if not pedido_encontrado:
-                    msg_alerta('Não existem pedidos cadastrados nesta categoria.')
             separador()
             rodape_dados = (f'{cores["negrito"]}Quantidade de pedidos: {cores["limpa"]}{qtd_pedidos} | '
                             f'{cores["negrito"]}Valor total: {cores["limpa"]}{formatar_para_real(valor_total)}')
@@ -201,7 +199,7 @@ def gastos_por_loja(nome_arquivo):
     if dados:
         totais_por_loja = {}
         for dado in dados:
-            if dado['status'] not in 'CANCELADO':
+            if dado['status'] != 'CANCELADO':
                 nome_loja = dado['loja']
                 valor_pedido = dado['valor']
                 if nome_loja not in totais_por_loja:
