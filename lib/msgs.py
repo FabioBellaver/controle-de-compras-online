@@ -1,5 +1,6 @@
 from lib.cores import cores
 
+
 def msg_alerta(txt):
     print(f'{cores["am"]}{cores["negrito"]}AVISO: {cores["limpa"]}{txt}')
 

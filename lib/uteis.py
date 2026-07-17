@@ -22,6 +22,18 @@ def validar_opcao(maximo = 8):
         except ValueError:
             msg_erro('Digite um número inteiro válido (apenas números).')
 
+def validar_termo_de_busca(txt):
+    while True:
+        termo_de_busca = str(input(txt)).strip()
+        if termo_de_busca == '':
+            msg_erro('Termo inválido.')
+        elif len(termo_de_busca) > 25:
+            msg_erro('A busca tem limite de 25 caracteres.')
+        elif termo_de_busca.isnumeric():
+            msg_erro('A descrição não deve conter apenas números.')
+        else:
+            return termo_de_busca
+
 def validar_nome_loja(txt):
     while True:
         nome_loja = str(input(txt)).strip().title()
