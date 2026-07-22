@@ -2,7 +2,7 @@
 
 Um sistema em Python para acompanhar pedidos feitos em lojas online, do status de compra até a entrega, usando um arquivo JSON como banco de dados.
 
-## Features
+## Funcionalidades
 
 - Cadastrar pedidos (loja, produto, valor, previsão de entrega)
 - Atualizar o status do pedido (comprado, enviado, entregue, cancelado)
@@ -10,13 +10,13 @@ Um sistema em Python para acompanhar pedidos feitos em lojas online, do status d
 - Buscar pedidos por loja ou produto
 - Gerar relatório de gastos por loja
 
-## Technologies
+## Tecnologias
 
 - Python
 - JSON
 - nanoid
 
-## Running the Project
+## Executando o Projeto
 
 Instale a dependência necessária:
 
@@ -30,6 +30,6 @@ Execute o projeto:
 python app.py
 ```
 
-## Author
+## Autor
 
 Fabio Bellaver
